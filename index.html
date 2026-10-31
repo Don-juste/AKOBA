@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AKOBA — Espace de coworking à Cotonou</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="en-tete">
+      <a href="#" class="logo">AKOBA</a>
+      <nav class="navigation" aria-label="Navigation principale">
+        <ul class="menu">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#tarifs">Tarifs</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#contact" class="bouton bouton-principal">Réserver</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-texte">
+          <p class="hero-surtitre">Coworking à Cotonou</p>
+          <h1>Travaillez mieux, ensemble.</h1>
+          <p>
+            Un espace calme, une connexion rapide et une communauté de créateurs
+            pour faire avancer vos projets.
+          </p>
+          <div class="hero-actions">
+            <a href="#tarifs" class="bouton bouton-principal"
+              >Voir les tarifs</a
+            >
+            <a href="#services" class="bouton bouton-secondaire">Découvrir</a>
+          </div>
+        </div>
+        <img
+          src="image/hero.jpg"
+          alt="Espace de travail lumineux d'AKOBA"
+          class="hero-image"
+        />
+      </section>
+
+      <section id="services" class="section">
+        <h2>Nos services</h2>
+        <div class="grille-services">
+          <article class="carte-service">
+            <span class="etiquette">Nouveau</span>
+            <h3>Bureaux privés</h3>
+            <p>
+              Un bureau fermé pour vous et votre équipe, disponible à la semaine
+              ou au mois.
+            </p>
+          </article>
+          <article class="carte-service">
+            <h3>Postes partagés</h3>
+            <p>Installez-vous où vous voulez dans notre grand espace ouvert.</p>
+          </article>
+          <article class="carte-service">
+            <h3>Salle de réunion</h3>
+            <p>
+              Une salle équipée d'un écran et d'un tableau, réservable à
+              l'heure.
+            </p>
+          </article>
+          <article class="carte-service">
+            <h3>Fibre et électricité</h3>
+            <p>
+              Une connexion fibre et un groupe électrogène pour ne jamais être
+              coupé.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="tarifs" class="section">
+        <h2>Nos tarifs</h2>
+        <div class="grille-tarifs">
+          <!-- <article class="carte-tarif">
+            <h3>Journée</h3>
+            <p class="prix">3 000 FCFA</p>
+            <ul class="liste-avantages">
+              <li>Un poste partagé</li>
+              <li>Connexion fibre</li>
+            </ul>
+            <a href="#contact" class="bouton bouton-secondaire">Choisir</a>
+          </article>
+          <article class="carte-tarif populaire">
+            <h3>Mois</h3>
+            <p class="prix">45 000 FCFA</p>
+            <ul class="liste-avantages">
+              <li>Un poste partagé</li>
+              <li>Connexion fibre</li>
+              <li>4 h de salle de réunion</li>
+              <li>Café offert</li>
+            </ul>
+            <a href="#contact" class="bouton bouton-principal">Choisir</a>
+          </article>
+          <article class="carte-tarif">
+            <h3>Bureau privé</h3>
+            <p class="prix">120 000 FCFA</p>
+            <ul class="liste-avantages">
+              <li>Un bureau fermé</li>
+              <li>Connexion fibre</li>
+              <li>Salle de réunion illimitée</li>
+            </ul>
+            <a href="#contact" class="bouton bouton-secondaire">Choisir</a>
+          </article> -->
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>Nous contacter</h2>
+        <form class="formulaire">
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" name="nom" placeholder="Votre nom" />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="vous@exemple.com"
+          />
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Votre message"
+          ></textarea>
+
+          <button type="submit" class="bouton bouton-principal">Envoyer</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="pied-de-page">
+      <div class="pied-colonnes">
+        <div>
+          <p class="pied-titre">AKOBA</p>
+          <p>Espace de coworking au cœur de Cotonou.</p>
+        </div>
+        <div>
+          <p class="pied-titre">Adresse</p>
+          <p>Haie Vive, Cotonou, Bénin</p>
+        </div>
+        <div>
+          <p class="pied-titre">Horaires</p>
+          <p>Lundi – samedi : 8 h – 20 h</p>
+        </div>
+      </div>
+      <p class="copyright">© 2026 AKOBA. Tous droits réservés.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,352 @@
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ===== Base ===== */
+:root {
+  --couleur-principale: #0f766e;
+  --couleur-principale-foncee: #115e59;
+  --couleur-claire: #ccfbf1;
+  --couleur-texte: #1f2937;
+  --couleur-texte-doux: #6b7280;
+  --couleur-fond: #f9fafb;
+  --couleur-bordure: #e5e7eb;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: var(--couleur-texte);
+  background: var(--couleur-fond);
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.section {
+  margin-bottom: 80px;
+  scroll-margin-top: 96px;
+}
+
+/* ===== En-tête ===== */
+.en-tete {
+  display: flex;
+  position: sticky;
+  top: 0;
+  gap: 16px;
+  z-index: 10;
+  background: white;
+  border-bottom: 1px solid var(--couleur-bordure);
+  padding: 16px 24px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--couleur-principale);
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  gap: 24px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+.navigation {
+  order: 1;
+  width: 100%;
+}
+.menu a {
+  color: var(--couleur-texte);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.menu a:hover {
+  color: var(--couleur-principale);
+}
+/* ===== Hero ===== */
+.hero {
+  padding: 48px 0;
+  display: grid;
+  gap: 32px;
+}
+
+.hero-surtitre {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--couleur-principale);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.hero-image {
+  border-radius: 16px;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+
+.hero-texte {
+  animation: apparition 0.6s ease-out;
+}
+
+/*==Boutton==*/
+.bouton {
+  display: inline-block;
+  font-family: inherit;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+.bouton:focus-visible {
+  outline: 3px solid var(--couleur-principale);
+  outline-offset: 2px;
+}
+.bouton-principal {
+  background: var(--couleur-principale);
+  color: white;
+  border: none;
+}
+.bouton-secondaire {
+  background: transparent;
+  color: var(--couleur-principale);
+  border: 2px solid var(--couleur-principale);
+}
+.bouton-principal:hover {
+  background: var(--couleur-principale-foncee);
+}
+.bouton-secondaire:hover {
+  background: var(--couleur-claire);
+}
+
+/* ===== Services ===== */
+.section > h2 {
+  margin-bottom: 24px;
+}
+
+.section > h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 4px;
+  background: var(--couleur-principale);
+  border-radius: 999px;
+  margin-top: 8px;
+}
+.grille-services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.carte-service {
+  background: white;
+  border: 1px solid var(--couleur-bordure);
+  border-radius: 12px;
+  padding: 24px;
+  position: relative;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+.carte-service:hover {
+  transform: translateY(-4px);
+  border-color: var(--couleur-principale);
+}
+.carte-service h3 {
+  padding-right: 72px;
+}
+.etiquette {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--couleur-claire);
+  color: var(--couleur-principale-foncee);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+/* ===== Tarifs ===== */
+.grille-tarifs {
+  display: grid;
+  gap: 24px;
+}
+.carte-tarif {
+  background: white;
+  border: 1px solid var(--couleur-bordure);
+  border-radius: 12px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+}
+.populaire {
+  border: 2px solid var(--couleur-principale);
+}
+.carte-tarif .bouton {
+  margin-top: auto;
+  text-align: center;
+}
+.prix {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--couleur-principale);
+}
+.liste-avantages {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 24px;
+}
+.liste-avantages li {
+  padding: 8px 0;
+}
+
+.liste-avantages li:not(:last-child) {
+  border-bottom: 1px solid var(--couleur-bordure);
+}
+
+/* ===== Formulaire ===== */
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  gap: 12px;
+}
+.formulaire label {
+  font-weight: 600;
+}
+
+.formulaire input,
+.formulaire textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--couleur-bordure);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+.formulaire textarea {
+  min-height: 120px;
+}
+::placeholder {
+  color: var(--couleur-texte-doux);
+}
+input:focus-visible,
+.formulaire textarea:focus-visible {
+  outline: 3px solid var(--couleur-principale);
+  outline-offset: 2px;
+}
+.formulaire button {
+  align-self: flex-start;
+}
+
+/* ===== Pied de page ===== */
+.pied-de-page {
+  padding: 48px 24px;
+  background: var(--couleur-texte);
+  color: white;
+}
+.pied-colonnes {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.pied-titre {
+  font-weight: 700;
+}
+.copyright {
+  max-width: 1100px;
+  margin: 32px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--couleur-texte-doux);
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+/* ===== Animations ===== */
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ===== Responsive ===== */
+
+@media (min-width: 768px) {
+  .en-tete {
+    padding: 16px 48px;
+  }
+  .navigation {
+    order: 0;
+    width: auto;
+  }
+  .hero {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+    align-items: center;
+  }
+}
+@media (min-width: 1024px) {
+  .grille-tarifs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* ===== Accessibilité ===== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
